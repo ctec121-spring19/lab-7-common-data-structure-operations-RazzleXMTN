@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # lists.py
-
+#Matt Russell
 # general instructions: 
 #   - print a blank line between sections of output
 #   - Add your comments using triple quotes. Example:
@@ -11,12 +11,12 @@ def main():
     - creation
     '''
     # create an empty list using the variable name "l1" and print it
-    l1 = list()
+    l1 = []
     print(l1)
 
     # create a list with 3 elements using the variable name "l2". The elements
     # should be an int, a float and a string. Print l2
-    l2 = list([1, 1.1, "annoyed"])
+    l2 = [1, 1.1, "annoyed"]
     print(l2)
     print()
 
@@ -33,9 +33,10 @@ def main():
     # your code below here
     # repeat the loop but use l2 itself as the sequence. In this case index
     # values will not be available, so just print the elements
-    for i in range(0, len(l2)):
-        print(l2[i])
-        print("value: ", i)
+    for i in l2:
+        index = str(l2.index(i))
+        value = str(i)
+        print(index + " " + value)
     print()
 
     '''
@@ -43,7 +44,7 @@ def main():
     '''
     # mutable sequences like lists have two mechanisms to insert a new value.
     # use append() to add a new element to the end of l2 and print l2
-    l2.append(1000)
+    l2.append("XMTN")
     print(l2)
     # use insert to add a new element at the beginning of l2 and print l2.
     l2.insert(0, "10th Mountain")
@@ -53,8 +54,7 @@ def main():
     - element updates
     '''
     # use indexing and assignment to change the second element of l2 to 999
-    del l2[1]
-    l2.insert(1, 999)
+    l2[1] = 999
     # print l2
     print(l2)
 
@@ -73,7 +73,7 @@ def main():
     # use the index() method to find the index of 'i'
     li = l.index("i")
     # print the index
-    print(li)
+    print(index)
 
     '''
     - sort

@@ -36,7 +36,7 @@ def main():
     print()
 
     # What errors did you get? Add a comment here with the output:
-    ''' file does not exist errors '''
+    ''' file does not exist errors  'FileNotFoundError'  '''
     # The default mode for open() is 'r', so the statements above are really
     # the same code. Logically a file must exist in order for us to read it.
 
@@ -74,7 +74,7 @@ def main():
     '''
     fileName = "sample.txt"
     # View the file in a text editor.
-
+    open(fileName)
     # There are several ways to read a file
 
     # Method 1: read()
@@ -111,7 +111,7 @@ def main():
     # what type is data?
     '''list'''
     # how is it different from the data in Method 1?
-    ''' This prints it allas one big line and entire contents into memory'''
+    ''' This prints it all as one big line and entire contents into memory'''
     # Do the strings have escape characters?
     '''it would appear so'''
 
@@ -120,8 +120,9 @@ def main():
     # to make the ouput look like what you see in a text editor?
 
     # your code here
+    infile = open(fileName)
     for b in data:
-        print(b)
+        print(b, end='')
     # closing the file - uncomment the line below when you get here
     infile.close()
 
@@ -155,12 +156,12 @@ def main():
     '''
     # these are really just writing to a file.
     # open "mydata.txt" for writing using the file handle "outfile"
-    fileName = "myFile.txt"
-    outfile = open(fileName, "w")
+    fileName = "mydata.txt"
+    outfile = open("mydata.txt", "w")
     # Write several lines of gibberish to the file and close it.
     print("I never saw a wild thing")
     print("Sorry for itself.")
     # view the new file in a text editor to verify that the program worked.
-    '''i couldnt get it to work'''
+    outfile.close()
 
 main()
